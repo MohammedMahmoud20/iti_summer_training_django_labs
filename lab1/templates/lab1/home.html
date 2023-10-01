@@ -1,0 +1,126 @@
+{% load static %}
+
+<html>
+<head>
+    <style>
+        li {
+            padding: 10px;
+            margin: 5px;
+            list-style: none;
+            display: inline-block;
+            font: bold 15px sans-serif;
+        }
+        *{
+            padding:0;
+            margin:0;
+        }
+
+        li:hover{
+            color:blue;
+            text-decoration:underline;
+            cursor:pointer;
+        }
+
+        li:active {
+            color: darkmagenta;
+        }
+        tr:hover{
+            background-color: magenta;
+        }
+        body {
+            background-color:rgb(194, 193, 193);
+            background-attachment: fixed;
+        }
+        #left{
+            float: left;
+        }
+        .Productss{
+            display: inline-table;
+            width: 230px;
+            height: 170px;
+            margin-bottom: 300px;
+            margin-left: 100;
+            margin-top: auto;
+        }
+        .rights{
+            width: 1500px;
+            height:10px;
+            position: relative;
+            margin-right: auto;
+            margin-left: auto;
+            bottom: 200px;
+            padding-top: 70px;
+            background-color:rgb(202, 155, 225);
+        }
+        th:hover{
+            background-color: magenta;
+        }
+        .show-button {
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+        .delete-button {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <a id="left" href="index.html"><img src="{% static 'lab1/images/home.png' %}" alt="Image"></a><br/>
+    <ul align="right">
+        <li>Products</li>
+        <a href="about/"><li>about Us</li></a>
+        <a href="contact_us/"><li>Contact Us</li></a>
+    </ul>
+    <table class="Productss">
+        <tr>
+            <th>
+                <img src="{% static 'lab1/images/l1.jpg' %}" alt="Image"><br/>
+                hp laptop<br/>
+                <button class="show-button" onclick="location.href='/product/1/'">Show</button>
+                <button class="delete-button" onclick="location.href='/product/1/delete/'">Delete</button>
+            </th>
+        </tr>
+    </table>
+    <table class="Productss">
+        <tr>
+            <th>
+                <img src="{% static 'lab1/images/h1.jpg' %}" alt="Image"><br/>
+                sony head phone<br/>
+                <button class="show-button" onclick="location.href='/product/2/'">Show</button>
+                <button class="delete-button" onclick="location.href='/product/2/delete/'">Delete</button>
+            </th>
+        </tr>
+    </table>
+    <table class="Productss">
+        <tr>
+            <th>
+                <img src="{% static 'lab1/images/l2.jpg' %}" alt="Image"><br/>
+                mac laptop<br/>
+                <button class="show-button" onclick="location.href='/product/3/'">Show</button>
+                <button class="delete-button" onclick="location.href='/product/3/delete/'">Delete</button>
+            </th>
+        </tr>
+    </table>
+    <table class="Productss">
+        <tr>
+            <th>
+                <img src="{% static 'lab1/images/l3.jpg' %}" alt="Image"><br/>
+                hp laptop<br/>
+                <button class="show-button" onclick="location.href='/product/4/'">Show</button>
+                <button class="delete-button" onclick="location.href='/product/4/delete/'">Delete</button>
+            </th>
+        </tr>
+    </table>
+</body>
+</html>

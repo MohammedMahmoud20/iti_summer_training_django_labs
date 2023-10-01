@@ -1,0 +1,22 @@
+{% extends 'lab1/layouts/base.html' %}
+{% load static %}
+{% block title %}products info {% endblock %}
+{% block content %}
+<div style="display:inline-block">
+  <div class="card" style="width: 18rem;">
+<img src="{{product.get_image_url}}" width="200" height="200" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">name : {{product.name}}</h5>
+  <h5 class="card-title">catigory : {{product.catigory}}</h5>
+  <h5 class="card-title">price : {{product.price}}</h5>
+  <h5 class="card-title">created_at : {{product.created_at}}</h5>
+  <h5 class="card-title">updated_at : {{product.updated_at}}</h5>
+  <a href="{% url 'Products.home' %}" class="btn btn-primary">back to all product</a>
+</div>
+</div>
+  </div>
+{% endblock %}
+
+{% block body %}
+
+{% endblock %}

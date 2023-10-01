@@ -1,0 +1,37 @@
+{% extends 'lab1/layouts/base.html'%}
+{% load static %}
+{% block title %}all products {% endblock %}
+{% block content %}
+<a href="" class="btn btn-dark">add new product</a></br>
+{% for pro in products %}
+<div style="display:inline-block">
+    <div class="card" style="width: 18rem;">
+  <img src="" width="200" height="200" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{pro.name}}</h5>
+    <a href="" class="btn btn-primary">Show</a>
+    <a href="" class="btn btn-danger">delete</a>
+  </div>
+</div>
+    </div>
+{% endfor %}
+{% comment %} {% for product in product %}
+
+    <div style="display:inline-block">
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'product/images/'|add:product.image %}" width="200" height="200" class="card-img-top"
+                 alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <a href="{% url 'product.show' product.id %}" class="btn btn-primary">Show</a>
+                <a href="{% url 'product.delete' product.id %}" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %} {% endcomment %}
+{% endblock %}
+
+{% block body %}
+
+{% endblock %}
